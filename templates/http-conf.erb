@@ -2,6 +2,7 @@ server {
   listen <%= node['http_addr'] %>:<%= node['http_port'] %>;
 
   root <%= node['blog_path'] %>;
+  index index.php index.html;
 
   location ~ \.php$ {
     fastcgi_keep_conn on;
