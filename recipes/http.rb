@@ -4,23 +4,20 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-include_recipe 'nginx::repo'
+include_recipe 'hhvm'
+include_recipe 'nginx'
 
-package 'nginx' do
-  action :install
-end
-
-package 'hhvm' do
-  action :install
-end
-
-template '/etc/nginx/sites-enabled/wiw-http.conf' do
+template "#{node['nginx']['dir']}/sites-available/blog" do
   source 'http-conf.erb'
   owner 'root'
   group 'root'
   mode '0644'
 end
 
-service 'nginx' do
-  action [:enable, :restart]
+nginx_site 'default' do
+  enable false
+end
+
+nginx_site 'blog' do
+  enable true
 end
