@@ -1,0 +1,12 @@
+
+server {
+  listen <%= http_addr %>:<%= http_port %>;
+
+  location ~ \.php$ {
+    fastcgi_keep_conn on;
+    fastcgi_pass   <%= hhvm_addr %>:<%= hhvm_port %>;
+    fastcgi_index  index.php;
+    fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    include        fastcgi_params;
+  }
+}

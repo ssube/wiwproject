@@ -1,4 +1,4 @@
-# wiwproject
+# Blog Server
 
-TODO: Enter the cookbook description here.
+Simple LEMP blog server for When I Work interview project.
 
