@@ -7,3 +7,4 @@
 include_recipe 'apt'
 include_recipe 'wiwproject::db'
 include_recipe 'wiwproject::http'
+include_recipe 'wiwproject::blog'

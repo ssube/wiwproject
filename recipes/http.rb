@@ -21,3 +21,7 @@ end
 nginx_site 'blog' do
   enable true
 end
+
+service 'hhvm' do
+  action [:enable, :restart]
+end
