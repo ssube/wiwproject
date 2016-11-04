@@ -1,9 +1,3 @@
-#
-# Cookbook Name:: wiwproject
-# Recipe:: www
-#
-# Copyright (c) 2016 The Authors, All Rights Reserved.
-
 include_recipe 'hhvm'
 include_recipe 'nginx'
 

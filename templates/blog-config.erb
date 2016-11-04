@@ -1,0 +1,28 @@
+<?php
+define('DB_NAME', '<%= node['db_name'] %>');
+define('DB_USER', '<%= node['db_user'] %>');
+define('DB_PASSWORD', '<%= node['db_pass'] %>');
+define('DB_HOST', '<%= node['db_host'] %>');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+
+define('AUTH_KEY',         '<%= node['blog_salt'] %>');
+define('SECURE_AUTH_KEY',  '<%= node['blog_salt'] %>');
+define('LOGGED_IN_KEY',    '<%= node['blog_salt'] %>');
+define('NONCE_KEY',        '<%= node['blog_salt'] %>');
+define('AUTH_SALT',        '<%= node['blog_salt'] %>');
+define('SECURE_AUTH_SALT', '<%= node['blog_salt'] %>');
+define('LOGGED_IN_SALT',   '<%= node['blog_salt'] %>');
+define('NONCE_SALT',       '<%= node['blog_salt'] %>');
+
+$table_prefix  = 'wp_';
+define('WP_DEBUG', false);
+
+/* That's all, stop editing! Happy blogging. */
+
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') )
+	define('ABSPATH', dirname(__FILE__) . '/');
+
+/** Sets up WordPress vars and included files. */
+require_once(ABSPATH . 'wp-settings.php');
